@@ -1,7 +1,7 @@
+package AVL;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
-import AVL.AVL;
 
 /**
  * Classe de teste da Arvore AVL, com menu de console que permite:

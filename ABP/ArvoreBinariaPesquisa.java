@@ -111,7 +111,7 @@ public class ArvoreBinariaPesquisa {
 
     protected int alturaRecursiva(No atual) {
         if (atual == null) {
-            return -1; // Altura de uma arvore vazia e -1.
+            return 0; // Altura de uma arvore vazia e 0.
         }
         int alturaEsquerda = alturaRecursiva(atual.esquerda);
         int alturaDireita = alturaRecursiva(atual.direita);
@@ -177,29 +177,29 @@ public class ArvoreBinariaPesquisa {
         return raiz == null;
     }
 
-    public void mostrar() {
+   public void mostrar() {
         System.out.println("Arvore:");
         if (raiz == null) {
             System.out.println("(arvore vazia)");
         } else {
-            mostrarRecursivo(raiz, "", false);
+            mostrarRecursivo(raiz, "", false, true);
             System.out.println("-----------------------------------");
         }
     }
 
     protected void mostrarRecursivo(
-            No atual, String prefixo, boolean isEsquerda) {
+            No atual, String prefixo, boolean isEsquerda, boolean isRaiz) {
         if (atual == null) {
             return;
         }
         String ramoDir = prefixo + (isEsquerda ? "|   " : "    ");
-        mostrarRecursivo(atual.direita, ramoDir, false);
+        mostrarRecursivo(atual.direita, ramoDir, false, false);
 
-        String conector = isEsquerda ? "\\-- " : "/-- ";
+        String conector = isRaiz ? "" : (isEsquerda ? "\\-- " : "/-- ");
         System.out.println(prefixo + conector + rotulo(atual));
 
         String ramoEsq = prefixo + (isEsquerda ? "    " : "|   ");
-        mostrarRecursivo(atual.esquerda, ramoEsq, true);
+        mostrarRecursivo(atual.esquerda, ramoEsq, true, false);
     }
 
     protected String rotulo(No no) {

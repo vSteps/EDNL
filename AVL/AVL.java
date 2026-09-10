@@ -2,6 +2,7 @@ package AVL;
 
 import ABP.ArvoreBinariaPesquisa;
 import ABP.No;
+
 public class AVL extends ArvoreBinariaPesquisa {
 
     // No da AVL: estende o No da ABP acrescentando a altura.
