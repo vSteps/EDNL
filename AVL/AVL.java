@@ -22,7 +22,11 @@ public class AVL extends ArvoreBinariaPesquisa {
 
 
     private int altura(NoAVL no) {
-        return (no == null) ? -1 : no.altura;
+        if (no == null){
+            return -1;
+        }else {
+            return no.altura;
+        }
     }
 
     private void atualizarAltura(NoAVL no) {
