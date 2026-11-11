@@ -1,5 +1,3 @@
-import RN.RubroNegra;
-
 import java.util.Scanner;
 
 public class Main {

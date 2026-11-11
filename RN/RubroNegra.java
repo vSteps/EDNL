@@ -1,4 +1,4 @@
-package RN;
+
 
 import ABP.ArvoreBinariaPesquisa;
 import ABP.No;
@@ -10,7 +10,7 @@ import ABP.No;
 // 3. Toda folha (null) e considerada preta.
 // 4. Filho de no vermelho e preto (nao ha dois vermelhos seguidos).
 // 5. Todo caminho de um no ate suas folhas tem o mesmo numero de pretos.
- */
+
 public class RubroNegra extends ArvoreBinariaPesquisa {
 
     // nao pode mudar a cor!
